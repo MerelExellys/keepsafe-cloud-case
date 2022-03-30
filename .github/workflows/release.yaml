@@ -10,7 +10,10 @@ jobs:
     name: TODO
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - id: command
         run: echo ${{ env.SHOWCASE_ENV }}
-      - id: show pipeline environemnt
-        run: ls
+      - run: npm install
+      - run: npm test
+      - run: docker push janvankant/dockerdemo:testversion
+      
