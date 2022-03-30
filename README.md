@@ -66,13 +66,13 @@ EXPOSE 8080
 #COPY all files into the image, this way all node-modules are available and you can immediately run the code
 COPY . .
 #This command will run when the docker image is boots. And start the server.
-CMD ["npm","run", "deploy"]
+CMD ["npm","run", "start"]
 ```
 4) Build docker file and tag a name locally `docker build . -t "my-first-container:v0.0.1"`
 5) Checkout docker image exists `docker images`
 6) Run docker image locally `docker run my-first-container:v0.0.1`
 7) Verify docker is server is running `docker ps`
-8) Call endpoints described above.
+8) Call endpoints described above
 
 ### Docker build.
 Once the local image is verified, we can execute the steps in the pipeline.
