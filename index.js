@@ -34,6 +34,7 @@ app.get('/totalRent', (req, res) => {
   res.json({ success: true, totalRent });
 });
 
+
 app.listen(PORT, () => {
   console.debug('Node Js Server is Running');
 });
